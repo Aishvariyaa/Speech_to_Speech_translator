@@ -7,11 +7,11 @@ Speak, translate, and connect with people around the world effortlessly.
 
 ## 🎯 Features
 
-* 🎤 Real-time speech recognition
-* 🌍 Instant language translation
-* 💬 Clean and responsive UI
-* ⚡ Built with Next.js + TypeScript + Tailwind CSS
-* 🔧 Extensible for multiple translation APIs
+*  Real-time speech recognition
+*  Instant language translation
+*  Clean and responsive UI
+*  Built with Next.js + TypeScript + Tailwind CSS
+*  Extensible for multiple translation APIs
 
 ---
 
