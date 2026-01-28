@@ -16,7 +16,6 @@ export default function Translator() {
   const recognitionRef = useRef<any>(null);
   const audioContextRef = useRef<AudioContext | null>(null);
 
-  // Debug logging function
   const addDebugInfo = (message: string) => {
     console.log(message);
     setDebugInfo(prev => [...prev.slice(-4), `${new Date().toLocaleTimeString()}: ${message}`]);
@@ -33,7 +32,6 @@ export default function Translator() {
     { code: 'gujarati', name: 'Gujarati', flag: '🇮🇳' },
   ];
 
-  // Audio feedback functions
   const playBeep = (frequency: number = 800, duration: number = 200) => {
     if (!audioContextRef.current) {
       audioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
@@ -60,7 +58,6 @@ export default function Translator() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      // Detect browser type
       const userAgent = navigator.userAgent.toLowerCase();
       if (userAgent.includes('firefox')) {
         setBrowserType('firefox');
@@ -72,7 +69,6 @@ export default function Translator() {
         setBrowserType('other');
       }
 
-      // Check for speech recognition support
       const SpeechRecognition = (window as any).SpeechRecognition || 
                                (window as any).webkitSpeechRecognition || 
                                (window as any).mozSpeechRecognition;
@@ -85,7 +81,6 @@ export default function Translator() {
           recognition.interimResults = true;
           recognition.lang = 'en-US';
           
-          // Only set maxAlternatives if supported (Chrome/Edge)
           if ('maxAlternatives' in recognition) {
             recognition.maxAlternatives = 1;
           }
@@ -154,7 +149,6 @@ export default function Translator() {
 
   const handleTranslation = async (text: string) => {
     setIsTranslating(true);
-    // Simulate translation API call
     setTimeout(() => {
       const mockTranslations: { [key: string]: string } = {
         hindi: `नमस्ते, यह एक नमूना अनुवाद है: "${text}"`,
@@ -187,15 +181,12 @@ export default function Translator() {
 
     try {
       addDebugInfo('Requesting microphone permission...');
-      // Request microphone permission first
       await navigator.mediaDevices.getUserMedia({ audio: true });
       addDebugInfo('Microphone permission granted');
       
       setTranscript('');
       setTranslation('');
       setInterimTranscript('');
-      
-      // Play start beep
       try {
         playStartBeep();
         addDebugInfo('Start beep played');
@@ -203,7 +194,6 @@ export default function Translator() {
         addDebugInfo(`Beep error (non-critical): ${beepError}`);
       }
       
-      // Small delay to let the beep play
       setTimeout(() => {
         try {
           addDebugInfo('Starting speech recognition...');
@@ -344,7 +334,7 @@ export default function Translator() {
             {!isSupported && (
               <div className="text-center mb-4 bg-yellow-50 border border-yellow-200 p-6 rounded-2xl">
                 <div className="text-yellow-800 font-medium mb-3">
-                  ⚠️ Speech Recognition Setup Required
+                   Speech Recognition Setup Required
                 </div>
                 {browserType === 'firefox' ? (
                   <div className="text-yellow-700 text-sm space-y-2">
@@ -438,7 +428,7 @@ export default function Translator() {
             </p>
             {browserType === 'firefox' && isSupported && (
               <p className="text-xs text-green-600 mt-1">
-                ✅ Firefox speech recognition is enabled
+                 Firefox speech recognition is enabled
               </p>
             )}
           </div>
