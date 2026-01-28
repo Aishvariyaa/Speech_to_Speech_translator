@@ -1,11 +1,11 @@
-# 🗣️ Speech Translator
+#  Speech Translator
 
 A real-time **speech translation web app** built using **Next.js**, **TypeScript**, and **Tailwind CSS**.
 Speak, translate, and connect with people around the world effortlessly.
 
 ---
 
-## 🎯 Features
+##  Features
 
 *  Real-time speech recognition
 *  Instant language translation
@@ -15,7 +15,7 @@ Speak, translate, and connect with people around the world effortlessly.
 
 ---
 
-## 🧠 Tech Stack
+##  Tech Stack
 
 * **Frontend Framework:** Next.js (React-based)
 * **Language:** TypeScript
@@ -25,9 +25,9 @@ Speak, translate, and connect with people around the world effortlessly.
 
 ---
 
-## ⚙️ Installation & Setup Guide
+##  Installation & Setup Guide
 
-### 🪄 Prerequisites
+###  Prerequisites
 
 Make sure you have the following installed:
 
@@ -40,31 +40,31 @@ Make sure you have the following installed:
 ### 🧰 Steps to Run Locally
 
 ```bash
-# 1️⃣ Clone the repository
+# 1️ Clone the repository
 git clone https://github.com/<your-username>/Speech-Translator.git
 cd Speech-Translator/app
 
-# 2️⃣ Install dependencies
+# 2️ Install dependencies
 npm install
 # or
 yarn install
 
-# 3️⃣ Setup environment variables
+# 3️ Setup environment variables
 cp .env.local.example .env.local
 # (Add your translation API keys or configuration if needed)
 
-# 4️⃣ Run the development server
+# 4️ Run the development server
 npm run dev
 # or
 yarn dev
 
-# 5️⃣ Open your browser
+# 5️ Open your browser
 http://localhost:3000
 ```
 
 ---
 
-## 🌐 Environment Variables (`.env.local`)
+##  Environment Variables (`.env.local`)
 
 If your app integrates with APIs, include them like:
 
@@ -74,7 +74,7 @@ NEXT_PUBLIC_TRANSLATE_API_KEY=your_api_key_here
 
 ---
 
-## 🗂 Project Structure
+##  Project Structure
 
 ```
 Speech-Translator/
@@ -95,14 +95,14 @@ Speech-Translator/
 
 ---
 
-## 💄 Styling
+##  Styling
 
 Tailwind CSS is preconfigured for rapid UI development.
 Modify `tailwind.config.ts` or `globals.css` for theming and custom designs.
 
 ---
 
-## 🧩 Available Scripts
+##  Available Scripts
 
 | Command         | Description                |
 | --------------- | -------------------------- |
@@ -113,7 +113,7 @@ Modify `tailwind.config.ts` or `globals.css` for theming and custom designs.
 
 ---
 
-## 🚀 Deployment
+##  Deployment
 
 Deploy easily on any modern platform supporting Next.js:
 
@@ -131,13 +131,13 @@ vercel deploy
 
 ---
 
-## 🧑‍💻 Author
+##  Author
 
 **Aishvariyaa Jayakumar**
 AI | ML | DS Enthusiast passionate about building intelligent tools for education and healthcare.
 
 ---
 
-## 🏷 License
+##  License
 
 This project is licensed under the **MIT License** – free to modify and distribute.
