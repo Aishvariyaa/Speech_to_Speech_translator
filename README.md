@@ -133,7 +133,7 @@ vercel deploy
 
 ## 🧑‍💻 Author
 
-**Aishvariyaa (Aishu)**
+**Aishvariyaa Jayakumar**
 AI | ML | DS Enthusiast passionate about building intelligent tools for education and healthcare.
 
 ---
